@@ -129,12 +129,12 @@ body {
   position: relative;
   text-align: left;
   background-image: linear-gradient(#fff 60%, #ddd);
-  height: 25em;
+  height: 35em;
 }
 
 .floating-text-title {
   position: relative;
-  top: 10%;
+  top: 25%;
   left: 5%;
   width:40%;
   min-width: 300px;
@@ -160,7 +160,7 @@ button:active {
 /*articles column**********************************/
 
 .article-container {
-  margin: 0 5%;
+  margin: 5% 5%;
 }
 
 html {
@@ -218,11 +218,17 @@ html {
 }
 
 /*footer css**********************************************/
-
 footer {
-  background-color: lightgray;
-  margin: 5% 5% 2% 5%;
-  padding: 1%;
+  background-color: #ddd;
+  margin-top: 5%;
+  font-size: 0.9em
+
+}
+
+.footer {
+  overflow:auto; 
+  padding: 5% 1%;
+  margin: 0 5%;
 }
 
 .footer-column-left {
@@ -239,4 +245,14 @@ footer {
   margin-bottom: 16px;
   padding: 0 8px;
 
+}
+
+/*media query for columns - move to other media queries?? drop queries to bottom of css*/ 
+@media screen and (max-width: 700px) {
+
+  .footer-column-left,
+  .footer-column-right {
+    width: 90%;
+    display: block;
+  }
 }
