@@ -6,6 +6,8 @@
   <title>Pure CSS Responsive Navbar</title> 
   <link rel="icon" href="img/gradient.png" type="image/png" sizes="16x16"> 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -40,9 +42,17 @@
     <div class="floating-text-title">
       <h1>Elephant Bacon Waffles</h1>
       <p>Thought experiments (Gedankenexperimenten) are “facts” in the sense that they have a “real life” correlate in the form of electrochemical activity in the brain.</p>
-      <button>Click here for waffles</button>
+      <button id="waffle-btn">Click here for waffles</button>
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close"></span>
+          <img src="img/waffle.png" alt="waffle" style="width:100%">
+        </div>
+      </div>
+        <script src="js/modal.js"></script>
     </div>
-
   </div>
 
   <!-- article columns -->
@@ -86,33 +96,27 @@
     <div class="floating-text-center">
       <h2>Always Look On The Bright Side Of Life</h2>
       <div id="buttons">
-        <button class="do-this-btns" onclick="bwClick()">Do this thing</button>
-        <button class="do-this-btns rainbow-btn" onclick="colorClick()">Or do this thing</button>
+        <button class="do-this-btns" onclick="bwClick();">Do this thing</button>
+        <button class="do-this-btns rainbow-btn" onclick="colorClick();">Or do this thing</button>
       </div>
     </div>
   </div>
 
     <!-- article columns -->
   <div class="article-container">
-    <h2>Philosophy As A Science</h2>
+    <h2>From Our Blog</h2>
 
     <div class="row">
       <div class="column">
         <div class="card">
           <img src="img/waffle.png" alt="waffle" style="width:100%">
           <div class="blurb">
-            <h3>Words To Live By</h3>
-            <p>The preservation of human life is the ultimate value, a pillar of ethics and the foundation of all morality. This held true in most cultures and societies throughout history.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <img src="img/waffle.png" alt="waffle" style="width:100%">
-          <div class="blurb">
-            <h3>Words To Live By</h3>
-            <p>The preservation of human life is the ultimate value, a pillar of ethics and the foundation of all morality. This held true in most cultures and societies throughout history.</p>
+            <h3>Blog Post Title</h3>
+            <p>Watching the news the other day, it occurred to me that people who have “words to live by”.</p>
+            <div class="blog-post-data">
+              <div class="time"> 30 MIN AGO</div>
+              <div class="comments"><i class="fas fa-comment-alt"></i> &nbsp; 3 comments</div> 
+            </div>
           </div>
         </div>
       </div>
@@ -120,8 +124,25 @@
         <div class="card">
           <img src="img/waffle.png" alt="waffle" style="width:100%">
           <div class="blurb">
-            <h3>Words To Live By</h3>
-            <p>The preservation of human life is the ultimate value, a pillar of ethics and the foundation of all morality. This held true in most cultures and societies throughout history.</p>
+            <h3>Blog Post Title</h3>
+            <p>Watching the news the other day, it occurred to me that people who have “words to live by”.</p>
+            <div class="blog-post-data">
+              <div class="time"> 30 MIN AGO</div>
+              <div class="comments"><i class="fas fa-comment-alt"></i> &nbsp; 3 comments</div> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <img src="img/waffle.png" alt="waffle" style="width:100%">
+          <div class="blurb">
+            <h3>Blog Post Title</h3>
+            <p>Watching the news the other day, it occurred to me that people who have “words to live by”.</p>
+            <div class="blog-post-data">
+              <div class="time"> 30 MIN AGO</div>
+              <div class="comments"><i class="fas fa-comment-alt"></i> &nbsp; 3 comments</div> 
+            </div>
           </div>
         </div>
       </div>
@@ -131,7 +152,7 @@
   <footer>
     <div class="footer">
       <div class="footer-column-left">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non interdum felis. Proin pulvinar felis quis ex viverra efficitur. Vivamus tincidunt, eros vel placerat accumsan, augue leo placerat mauris, a ornare justo nulla eu lacus. Nunc ac ipsum et turpis mattis accumsan. Ut porta lacus ac velit mollis tincidunt. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget urna ac metus scelerisque interdum ac et enim. Aliquam suscipit felis dolor, vel finibus leo euismod ut. Quisque pulvinar cursus magna et dictum. Phasellus non condimentum dui, ac placerat libero. In eleifend lacus id elementum aliquam. Integer scelerisque ipsum non ligula venenatis rhoncus.
       </div>
       <div class="footer-column-right">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non interdum felis. Proin pulvinar felis quis ex viverra efficitur.
