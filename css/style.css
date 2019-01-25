@@ -227,11 +227,17 @@ html {
   display: table;
 }
 
-/*media query for columns - move to other media queries?? drop queries to bottom of css*/ 
+/*media query for columns and title splash*/
 @media screen and (max-width: 700px) {
   .column {
     width: 100%;
     display: block;
+  }
+  .container {
+    height: 25em;
+  }
+  .floating-text-title {
+    top: 15%;
   }
 }
 
@@ -375,7 +381,27 @@ footer {
   width: 60%;
 }
 
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 700px) {
-.modal-content {
-  width:80%;
+  .modal-content {
+    width:80%;
+  }
+
+  .close {
+    font-size: 18px;
+  }
 }
