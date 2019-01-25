@@ -245,11 +245,11 @@ html {
   border: 1px solid #444;
   background-color: transparent;
   color: #444;
-  font-weight: bold;
 }
 
 .rainbow-btn:hover{
   color: white;
+  font-weight: bold;
   text-shadow: 1px 1px #444;
   background-image:     linear-gradient(
     to right, 
