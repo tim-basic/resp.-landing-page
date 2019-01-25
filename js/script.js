@@ -2,13 +2,28 @@
 
 // gradient script ***********************************
 
-var colors = new Array(
+var whichButton = 0; // 0 is for no background
+
+function bwClick() { whichButton = 1; } // 1 is for bw
+
+function colorClick() { whichButton = 2; } // 2 is for rainbow background
+
+
+var bwgradient = new Array(
   [0,0,0],
   [255,255,255],
   [0,0,0],
   [255,255,255],
   [0,0,0],
   [255,255,255]);
+
+var colors = new Array(
+  [62,35,255],
+  [60,255,60],
+  [255,35,98],
+  [45,175,230],
+  [255,0,255],
+  [255,128,0]);
 
 var step = 0;
 //color table indices for: 
@@ -26,10 +41,21 @@ function updateGradient()
   
   if ( $===undefined ) return;
   
-var c0_0 = colors[colorIndices[0]];
-var c0_1 = colors[colorIndices[1]];
-var c1_0 = colors[colorIndices[2]];
-var c1_1 = colors[colorIndices[3]];
+  if ( whichButton === 0 ) return;
+  
+  if ( whichButton === 1) {
+    var c0_0 = bwgradient[colorIndices[0]];
+    var c0_1 = bwgradient[colorIndices[1]];
+    var c1_0 = bwgradient[colorIndices[2]];
+    var c1_1 = bwgradient[colorIndices[3]];  
+    
+  } else if ( whichButton === 2){
+    var c0_0 = colors[colorIndices[0]];
+    var c0_1 = colors[colorIndices[1]];
+    var c1_0 = colors[colorIndices[2]];
+    var c1_1 = colors[colorIndices[3]];  
+  }
+  
 
 var istep = 1 - step;
 var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
